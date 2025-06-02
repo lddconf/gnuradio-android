@@ -43,7 +43,7 @@ cd gnuradio-android/docker
 - Build the container. *Please note that the scripts accepts several Android licenses during the build process.*
 
 ``` shell
-docker build -t gnuradio-android .
+docker buildx build -t gnuradio-android .
 ```
 
 - Run the Docker container. The `privileged` flag and the `/dev/bus/usb` mount seem to be required to access the phone from the container. The `DISPLAY` variable and the `Xauthority` mount allow to start GUI applications in the container.
